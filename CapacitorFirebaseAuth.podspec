@@ -1,12 +1,12 @@
 
   Pod::Spec.new do |s|
     s.name = 'CapacitorFirebaseAuth'
-    s.version = '3.1.2-rc.3'
+    s.version = '4.0.0-rc.0'
     s.summary = 'Capacitor plugin for Firebase Authentication'
     s.license = 'MIT'
-    s.homepage = 'https://github.com/jayp0521/capacitor-firebase-auth.git'
-    s.author = 'Jay Patel'
-    s.source = { :git => 'https://github.com/jayp0521/capacitor-firebase-auth.git', :tag => s.version.to_s }
+    s.homepage = 'https://github.com/santosbj/capacitor-firebase-auth.git'
+    s.author = 'José de los Santos Bravo'
+    s.source = { :git => 'https://github.com/santosbj/capacitor-firebase-auth.git', :tag => s.version.to_s }
     s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
     s.ios.deployment_target  = '12.0'
     s.dependency 'Capacitor'

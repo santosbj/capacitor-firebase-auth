@@ -11,6 +11,8 @@ import {
   PhoneSignInResult, SignInOptions, TwitterSignInResult
 } from './definitions';
 
+import { AppleName } from '.';
+
 export const CapacitorFirebaseAuth = registerPlugin<CapacitorFirebaseAuthPlugin>('CapacitorFirebaseAuth', {
     web: () => import('./web').then(m => new m.CapacitorFirebaseAuthWeb()),
 });
@@ -137,11 +139,11 @@ export const cfaSignInAppleProvider = 'apple.com';
 /**
  * Call the Apple sign in method on native and sign in on web layer with retrieved credentials.
  */
-export const cfaSignInApple = (): Observable<User> => {
+export const cfaSignInApple = (): Observable<User & { fullName: AppleName }> => {
 	return new Observable(observer => {
 		// native sign in
 		plugin.signIn<AppleSignInResult>({ providerId: cfaSignInAppleProvider }).then((result: AppleSignInResult) => {
-			const { idToken, rawNonce } = result;
+			const { idToken, rawNonce, fullName  } = result;
 
 			const provider = new OAuthProvider('apple.com');
 			provider.addScope('email');
@@ -155,7 +157,7 @@ export const cfaSignInApple = (): Observable<User> => {
 					if(!userCredential.user) {
 						throw new Error('Firebase User was not received.')
 					}
-					observer.next(userCredential.user);
+					observer.next({...userCredential.user, fullName });
 					observer.complete();
 				})
 				.catch((reject: any) => observer.error(reject));

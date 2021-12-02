@@ -1,7 +1,7 @@
 {
-	"name": "@jaybabu/capacitor-firebase-auth",
+	"name": "capacitor-firebase-auth",
 	"version": "4.0.0",
-	"description": "Capacitor plugin for Firebase Authentication",
+	"description": "Capacitor plugin for Firebase 9.x Authentication",
 	"main": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
 	"scripts": {
@@ -11,7 +11,7 @@
 		"watch": "tsc --watch",
 		"prepublishOnly": "npm run build"
 	},
-	"author": "Jay Patel",
+	"author": "José de los Santos Bravo",
 	"license": "MIT",
 	"dependencies": {
 		"@capacitor/core": "latest",
@@ -50,10 +50,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jayp0521/capacitor-firebase-auth.git"
+		"url": "https://github.com/santosbj/capacitor-firebase-auth.git"
 	},
 	"bugs": {
-		"url": "https://github.com/jayp0521/capacitor-firebase-auth.git/issues"
+		"url": "https://github.com/santosbj/capacitor-firebase-auth.git/issues"
 	},
-	"homepage": "https://github.com/jayp0521/capacitor-firebase-auth#readme"
+	"homepage": "https://github.com/santosbj/capacitor-firebase-auth#readme"
 }
