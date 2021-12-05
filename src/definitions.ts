@@ -36,6 +36,7 @@ export type AppleName = {
 };
 export class AppleSignInResult implements SignInResult {
   providerId = FacebookAuthProvider.PROVIDER_ID;
+  fullName?: AppleName;
   constructor(public idToken: string, public rawNonce: string, public accessToken: string, public secret: string) {
   }
 }
