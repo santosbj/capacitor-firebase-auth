@@ -1,6 +1,6 @@
 {
-	"name": "capacitor-firebase-auth",
-	"version": "4.0.0",
+	"name": "@santosbj/capacitor-firebase-auth",
+	"version": "4.0.1",
 	"description": "Capacitor plugin for Firebase 9.x Authentication",
 	"main": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
